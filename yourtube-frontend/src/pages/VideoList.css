@@ -1,0 +1,25 @@
+.videosWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vw;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.searchWrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.searchInput {
+  height: 2rem;
+  width: 20rem;
+  border-radius: 2px;
+  border: #afafaf 1px solid;
+  margin: 2rem;
+  padding: 0 0.5rem;
+}
+
+.searchInput:focus-visible {
+  outline-color: #f8e8e8;
+}

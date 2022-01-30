@@ -1,0 +1,14 @@
+.videoTitle {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.videoAuthor {
+  font-size: 0.75rem;
+  font-weight: lighter;
+}
+
+.videoDate {
+  font-size: 0.75rem;
+  font-weight: lighter;
+}

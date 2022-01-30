@@ -1,0 +1,12 @@
+.videoDetailsWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto auto;
+  width: 70vw;
+  align-content: center;
+}
+
+.videoDescription {
+  white-space: pre-wrap;
+  margin: 1rem 0;
+}

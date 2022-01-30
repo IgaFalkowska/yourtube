@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  backend:
+    container_name: yourtube-backend
+    build:
+      context: ../yourtube-backend
+      dockerfile: Dockerfile
+    depends_on:
+      - database
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://yourtube-database:5432/yourtube
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=root
+      - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.postgresql.Driver
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=none
+      - SPRING_JPA_DATABASE_PLATFORM=org.hibernate.dialect.PostgreSQLDialect
+    ports:
+    - 8080:8080
+
+  database:
+    container_name: yourtube-database
+    image: 'postgres:14.1-alpine'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+    ports:
+      - 5432:5432
+    volumes:
+      - ./initial_db.sql:/docker-entrypoint-initdb.d/initial_db.sql
+
+  frontend:
+    container_name: yourtube-frontend
+    build:
+      context: ../yourtube-frontend/
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000

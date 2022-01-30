@@ -1,0 +1,28 @@
+.header {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  background: #f8e8e8;
+  display: flex;
+  justify-content: flex-start;
+  z-index: 1;
+}
+
+.logo {
+  margin: 0.5rem 1rem;
+}
+
+.logoTitleLink {
+  align-self: center;
+  font-size: 1.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  color: #212020;
+}
+
+.main {
+  font-family: "Georgia", "Tahoma", "Times New Roman", serif;
+  color: #212020;
+  background-color: #fff;
+}
